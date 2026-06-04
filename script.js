@@ -13,12 +13,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Demo button functionality
+// Demo button functionality - Navigate to order form
 const demoButton = document.querySelector('.demo-button');
 if (demoButton) {
     demoButton.addEventListener('click', function () {
-        alert('Thank you for your interest! Booking functionality would be connected to a scheduling system.');
-        // In a real application, this would open a scheduling interface like Calendly
+        window.location.href = 'order-form.html';
     });
 }
 
