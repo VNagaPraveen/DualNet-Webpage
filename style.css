@@ -437,13 +437,72 @@ body {
 /* Benefits Section */
 .benefits {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
-    color: var(--white);
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    color: var(--text-dark);
 }
 
-.benefits-wrapper {
+.benefits-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-yellow);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Benefits Footer Section */
+.benefits-footer {
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.benefit-badges {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -457,6 +516,7 @@ body {
     padding: 0.75rem 1.5rem;
     border-radius: 30px;
     font-weight: bold;
+    font-size: 0.95rem;
 }
 
 .cta-section {
@@ -468,12 +528,13 @@ body {
 .cta-section h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
+    color: var(--text-dark);
 }
 
 .cta-section p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    color: var(--text-light);
 }
 
 .demo-button {
@@ -589,7 +650,26 @@ body {
         transform: none !important;
     }
 
+    .benefits-title {
+        font-size: 2rem;
+    }
+
     .cta-section h2 {
         font-size: 1.5rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .benefit-badges {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .benefit-badge {
+        display: block;
+        width: 100%;
     }
 }
