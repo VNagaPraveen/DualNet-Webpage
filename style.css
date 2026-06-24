@@ -249,3 +249,11 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 
 @media (max-width:920px){ .event-hero{padding:54px 0 50px;} }
 @media (max-width:620px){ .agenda{grid-template-columns:1fr;} }
+
+/* ---------- Event schedule / timeline ---------- */
+.schedule{margin-top:42px; border-top:1px solid var(--line);}
+.srow{display:grid; grid-template-columns:170px 1fr; gap:24px; padding:22px 4px; border-bottom:1px solid var(--line); align-items:baseline;}
+.srow .time{font-family:var(--display); font-weight:800; color:var(--ink); font-size:1.05rem; white-space:nowrap;}
+.srow .what h3{font-size:1.15rem; font-weight:800; margin:0 0 4px;}
+.srow .what p{margin:0; color:var(--muted); font-size:15.5px;}
+@media (max-width:620px){ .srow{grid-template-columns:1fr; gap:3px;} .srow .time{color:var(--gold-deep); font-size:.95rem;} }
